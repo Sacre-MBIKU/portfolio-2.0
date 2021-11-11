@@ -8,9 +8,11 @@
 import * as React from "react"
 // import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import "@fontsource/roboto-mono"
 
-import Header from "./header"
+import Header from "./header/Header"
 import "./layout.scss"
+import Main from "./main/Main"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,9 +26,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="container">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-    </>
+      <Main />
+    </div>
   )
 }
 

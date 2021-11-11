@@ -1,11 +1,36 @@
+$firstColor: #05caad;
+$fontFamily: "Roboto Mono";
+
+@mixin centerElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+}
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-html,
-body {
-  min-height: 100%;
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: $fontFamily;
+}
+
+.container {
+  width: 100vw;
   background-color: #2b2525;
-  width: 100%;
+  min-height: 100vw;
+}
+
+.logo {
+  color: $firstColor;
+  font-family: $fontFamily;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 40px;
 }
