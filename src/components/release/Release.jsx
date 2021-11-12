@@ -1,11 +1,10 @@
 import * as React from "react"
+import SectionTitle from "../shared/section_title/SectionTitle"
 import "./release.scss"
 
 const Release = () => (
   <section className="release-section">
-    <p className="section-title">
-      <strong>REALISATIONS</strong>
-    </p>
+   <SectionTitle title="REALISATIONS"/>
     <div className="release-section__articles">
       <ul>
         <li className="project">

@@ -14,6 +14,7 @@ import Header from "./header/Header"
 import "./layout.scss"
 import Home from "./home/Home"
 import Release from "./release/Release"
+import Technologies from "./technologies/technologies"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Home />
       <Release />
+      <Technologies />
     </div>
   )
 }
