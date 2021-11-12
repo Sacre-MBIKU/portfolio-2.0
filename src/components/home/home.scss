@@ -1,0 +1,75 @@
+$fontFamily: "Roboto Mono";
+$firstColor: #05caad;
+
+.home-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10%;
+  margin-bottom: 50px;
+  height: 25em;
+
+  .presantaion,
+  .imageDescription {
+    border: 1px solid #fff;
+    width: 50%;
+    height: 100%;
+  }
+
+  .presantaion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p {
+      background-color: #05caac27;
+      color: $firstColor;
+      font-size: 1em;
+      padding: 1em 1.5em;
+      width: 12em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $fontFamily;
+    }
+
+    h2 {
+      color: #fff;
+      font-family: $fontFamily;
+      font-weight: 800;
+      font-size: 1.5em;
+    }
+
+    h1 {
+      color: #fff;
+      font-family: $fontFamily;
+      font-weight: 900;
+      font-size: 2em;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .anchors {
+      display: flex;
+      height: 5em;
+      width: 15em;
+      justify-content: space-between;
+      li {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          padding: 0.5em 1.5em;
+          border: 1px solid #fff;
+          border-radius: 7px;
+          font-family: $fontFamily;
+
+          &.anchors__contact{
+            background-color: $firstColor;
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,6 +25,8 @@ a {
   width: 100vw;
   background-color: #2b2525;
   min-height: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {

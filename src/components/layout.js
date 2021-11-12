@@ -12,7 +12,7 @@ import "@fontsource/roboto-mono"
 
 import Header from "./header/Header"
 import "./layout.scss"
-import Main from "./main/Main"
+import Home from "./home/Home"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <div className="container">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Main />
+      <Home/>
     </div>
   )
 }
