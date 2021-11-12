@@ -11,7 +11,6 @@ $firstColor: #05caad;
 
   .presantaion,
   .imageDescription {
-    border: 1px solid #fff;
     width: 50%;
     height: 100%;
   }
@@ -70,6 +69,16 @@ $firstColor: #05caad;
           }
         }
       }
+    }
+  }
+
+  .imageDescription {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: hidden;
+    img {
+      width: 100%;
     }
   }
 }

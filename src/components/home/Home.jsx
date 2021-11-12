@@ -26,7 +26,9 @@ const Home = () => (
       </ul>
     </section>
 
-    <div className="imageDescription"></div>
+    <div className="imageDescription">
+      <img src={"/fullstack-developer.png"} alt="fullstack-developer" />
+    </div>
   </main>
 )
 
