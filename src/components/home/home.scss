@@ -63,9 +63,22 @@ $firstColor: #05caad;
           border: 1px solid #fff;
           border-radius: 7px;
           font-family: $fontFamily;
+            transition: all 0.5s ease-in;
 
-          &.anchors__contact{
+          &.anchors__contact {
             background-color: $firstColor;
+
+            &:hover {
+              background-color: transparent;
+              color: #05caad;
+            }
+          }
+
+          &.anchors__release {
+            &:hover {
+              color: #05caad;
+              border-color: #05caad;
+            }
           }
         }
       }
