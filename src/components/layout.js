@@ -16,6 +16,7 @@ import Home from "./home/Home"
 import Release from "./release/Release"
 import Technologies from "./technologies/technologies"
 import Contact from "./contact/Contact"
+import Footer from "./footer/Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,6 +36,7 @@ const Layout = ({ children }) => {
       <Release />
       <Technologies />
       <Contact />
+      <Footer/>
     </div>
   )
 }

@@ -4,43 +4,43 @@ header {
   width: 100%;
   padding: 0 10%;
   margin-bottom: 110px;
-}
 
-nav {
-  background-color: #05caac27;
-  display: flex;
-  align-items: center;
-  padding: 0 1em;
-
-  .faBars {
-    height: 2em;
-    width: 2em;
-    cursor: pointer;
-    color: #000;
-    transition: all 0.5s ease-in-out;
-
-    @media (min-width: 839.9px) {
-      display: none;
-    }
-
-    &:hover {
-      color: #fff;
-    }
-  }
-
-  ul {
-    min-width: 400px;
-    max-width: 450px;
+  nav {
+    background-color: #05caac27;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    padding: 0 1em;
 
-    @media (max-width: 839.91px) {
-      display: none;
+    .faBars {
+      height: 2em;
+      width: 2em;
+      cursor: pointer;
+      color: #000;
+      transition: all 0.5s ease-in-out;
+
+      @media (min-width: 839.9px) {
+        display: none;
+      }
+
+      &:hover {
+        color: #fff;
+      }
     }
 
-    li {
-      color: #fff;
+    ul {
+      min-width: 400px;
+      max-width: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      @media (max-width: 839.91px) {
+        display: none;
+      }
+
+      li {
+        color: #fff;
+      }
     }
   }
 }
