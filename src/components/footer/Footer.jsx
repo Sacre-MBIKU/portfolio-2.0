@@ -77,7 +77,8 @@ const Footer = () => {
         </div>
       </section>
       <p className="footer__copyright">
-        2021, All Right Reserve. <span>Sacré MBIKU MUKWAKANI</span>
+        <AnchorLink to="/#home"><img src="./homeLink.png" alt="link arrow icon" /></AnchorLink>
+        <span>2021, All Right Reserve. Sacré MBIKU MUKWAKANI</span>
       </p>
     </footer>
   )

@@ -24,6 +24,7 @@ $firstColor: #05caad;
       background-color: #05caac27;
       color: $firstColor;
       font-size: 1em;
+      margin-bottom: 2.5em;
       padding: 1em 1.5em;
       width: 12em;
       display: flex;
@@ -35,6 +36,7 @@ $firstColor: #05caad;
     h2 {
       color: #fff;
       font-family: $fontFamily;
+      margin-bottom: 2.5em;
       font-weight: 800;
       font-size: 1.5em;
     }

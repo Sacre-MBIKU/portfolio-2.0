@@ -67,6 +67,23 @@ $fontFamily: "Roboto Mono";
       }
     }
   }
+
+  @media (max-width: 839.9px) {
+    .footer__main__profile {
+      .social-media {
+        width: 100%;
+      }
+    }
+
+    .footer__main__profile,
+    .services {
+      width: 100%;
+    }
+    .footer-navigation,
+    .address {
+      display: none;
+    }
+  }
 }
 
 address {
@@ -89,4 +106,21 @@ address {
   font-size: 15px;
   color: #ffffff;
   font-family: $fontFamily;
+
+  a,img {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 4em;
+    margin-bottom: 0;
+    border-style: none;
+
+    span {
+      display: none;
+    }
+    a,img {
+      display: block;
+    }
+  }
 }
