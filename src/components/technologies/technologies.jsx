@@ -3,7 +3,7 @@ import SectionTitle from "../shared/section_title/SectionTitle"
 import "./technologies.scss"
 
 const Technologies = () => (
-  <section className="technologies-section">
+  <section className="technologies-section" id="techno">
     <SectionTitle title="TECHNOLOGIES" />
     <div className="technologies-section__articles">
       <ul>

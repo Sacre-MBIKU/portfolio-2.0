@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import "./home.scss"
 
 const Home = () => (
   <main className="home-section">
-    <section className="presantaion">
+    <section className="presantaion" id="home">
       <p>Salut! Je suis </p>
       <h2>Sacré MBIKU</h2>
       <h1>
@@ -14,14 +14,14 @@ const Home = () => (
       </h1>
       <ul className="anchors">
         <li>
-          <Link to="/" className="anchors__contact">
+          <AnchorLink to="/#contact" className="anchors__contact">
             Contact
-          </Link>
+          </AnchorLink>
         </li>
         <li>
-          <Link to="/" className="anchors__release">
-            Release
-          </Link>
+          <AnchorLink to="/#release" className="anchors__release">
+            Réalisations
+          </AnchorLink>
         </li>
       </ul>
     </section>

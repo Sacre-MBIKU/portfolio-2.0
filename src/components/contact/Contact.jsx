@@ -4,8 +4,8 @@ import "./contact.scss"
 
 const Contact = () => {
   return (
-    <section className="contact-section">
-      <SectionTitle title= "CONTACT" />
+    <section className="contact-section" id="contact">
+      <SectionTitle title= "CONTACT"  />
       <form action="#" method="post">
         <input type="text" name="userName" id="" />
         <input type="email" name="" id="" />

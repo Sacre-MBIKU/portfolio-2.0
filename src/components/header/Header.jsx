@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { FaBars } from "react-icons/fa"
 import "./header.scss"
 
@@ -12,19 +12,19 @@ const Header = ({ siteTitle }) => (
         <FaBars className="faBars" />
       </div>
 
-      
       <ul>
         <li>
-          <Link to="/">Accueil</Link>
+          <AnchorLink to="/#home">Accueil</AnchorLink>
+        </li>
+
+        <li>
+          <AnchorLink to="/#release">Réalisations</AnchorLink>
         </li>
         <li>
-          <Link to="/">Réalisations</Link>
+          <AnchorLink to="/#techno">Technologies</AnchorLink>
         </li>
         <li>
-          <Link to="/">Technologies</Link>
-        </li>
-        <li>
-          <Link to="/">Contact</Link>
+          <AnchorLink to="/#contact">Contact</AnchorLink>
         </li>
       </ul>
     </nav>

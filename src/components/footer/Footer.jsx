@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import "./footer.scss"
 
 const Footer = () => {
@@ -37,16 +38,16 @@ const Footer = () => {
           <strong>Liens</strong>
           <ul>
             <li>
-              <Link>Accueil</Link>
+              <AnchorLink to="/#home">Accueil</AnchorLink>
             </li>
             <li>
-              <Link>Accueil</Link>
+              <AnchorLink to="/#release">Réalisations</AnchorLink>
             </li>
             <li>
-              <Link>Accueil</Link>
+              <AnchorLink to="/#techno">Technologies</AnchorLink>
             </li>
             <li>
-              <Link>Accueil</Link>
+              <AnchorLink to="/#contact">Contact</AnchorLink>
             </li>
           </ul>
         </nav>

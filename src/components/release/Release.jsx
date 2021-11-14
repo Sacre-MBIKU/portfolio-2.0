@@ -3,8 +3,8 @@ import SectionTitle from "../shared/section_title/SectionTitle"
 import "./release.scss"
 
 const Release = () => (
-  <section className="release-section">
-   <SectionTitle title="REALISATIONS"/>
+  <section className="release-section" id="release">
+    <SectionTitle  title="REALISATIONS" />
     <div className="release-section__articles">
       <ul>
         <li className="project">
