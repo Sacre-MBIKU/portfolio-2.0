@@ -11,6 +11,19 @@ header {
     align-items: center;
     padding: 0 1em;
 
+    .activeLink{
+      color: #05caad;
+    }
+
+    a {
+
+      transition: all .5s ease-in;
+
+      &:hover {
+        color: #05caad;
+      }
+    }
+
     .faBars {
       height: 2em;
       width: 2em;
@@ -40,6 +53,8 @@ header {
 
       li {
         color: #fff;
+        font-size: 14px;
+
       }
     }
   }

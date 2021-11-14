@@ -7,7 +7,7 @@ $firstColor: #05caad;
   justify-content: space-around;
   padding: 0 10%;
   margin-bottom: 50px;
-  height: 25em;
+  min-height: 25em;
 
   .presantaion,
   .imageDescription {
@@ -50,8 +50,8 @@ $firstColor: #05caad;
 
     .anchors {
       display: flex;
-      height: 5em;
-      width: 25em;
+      height: 8em;
+      width: 20em;
       justify-content: space-between;
       li {
         height: 100%;
@@ -63,7 +63,7 @@ $firstColor: #05caad;
           border: 1px solid #fff;
           border-radius: 7px;
           font-family: $fontFamily;
-            transition: all 0.5s ease-in;
+          transition: all 0.5s ease-in;
 
           &.anchors__contact {
             background-color: $firstColor;
@@ -82,6 +82,14 @@ $firstColor: #05caad;
           }
         }
       }
+
+      @media (max-width: 510px) {
+        flex-direction: column;
+
+        li {
+          margin: .2em 0;
+        }
+      }
     }
   }
 
@@ -92,6 +100,32 @@ $firstColor: #05caad;
     overflow-y: hidden;
     img {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 839.9px) {
+    flex-direction: column-reverse;
+    width: 100%;
+
+    .presantaion,
+    .imageDescription {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .presantaion {
+      h2 {
+        margin: 2em 0;
+      }
+      h1 {
+        justify-content: center;
+        align-items: center;
+      }
+      span {
+        text-align: center;
+      }
     }
   }
 }

@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
 
       <ul>
         <li>
-          <AnchorLink to="/#home">Accueil</AnchorLink>
+          <AnchorLink className="activeLink" to="/#home">Accueil</AnchorLink>
         </li>
 
         <li>
