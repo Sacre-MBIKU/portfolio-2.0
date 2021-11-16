@@ -47,7 +47,7 @@ const Layout = ({
         siteDescription={siteDescription}
       />
       <Release />
-      <Technologies />
+      <Technologies skillDetails={skillDetails} />
       <Contact />
       <Footer
         socialNetworks={socialNetworks}

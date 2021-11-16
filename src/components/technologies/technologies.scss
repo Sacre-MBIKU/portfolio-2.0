@@ -30,7 +30,8 @@ $fontFamily: "Roboto Mono";
         border-radius: 9px;
 
         .techno__contents {
-          width: 100%;
+          padding: 0 1em;
+          width: 130%;
           height: 100%;
           background-color: #05caac1f;
           display: flex;
@@ -40,14 +41,15 @@ $fontFamily: "Roboto Mono";
           justify-content: space-around;
 
           .techno__contents__img {
-            width: 70%;
-            height: 70%;
+            width: 100%;
+            height: 60%;
           }
 
           .techno__contents__description {
             color: #fff;
-            font-size: 1em;
+            font-size: 1.2em;
             font-family: $fontFamily;
+            text-align: center;
           }
         }
       }
