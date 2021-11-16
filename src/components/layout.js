@@ -5,20 +5,20 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
+import * as React from "react";
 // import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import "@fontsource/roboto-mono"
+import { useStaticQuery, graphql } from "gatsby";
+import "@fontsource/roboto-mono";
 
-import Header from "./header/Header"
-import "./layout.scss"
-import Home from "./home/Home"
-import Release from "./release/Release"
-import Technologies from "./technologies/technologies"
-import Contact from "./contact/Contact"
-import Footer from "./footer/Footer"
+import Header from "./header/Header";
+import "./layout.scss";
+import Home from "./home/Home";
+import Release from "./release/Release";
+import Technologies from "./technologies/technologies";
+import Contact from "./contact/Contact";
+import Footer from "./footer/Footer";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,22 +27,22 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className="container">
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata.title || `Title`} />
       <Home />
       <Release />
       <Technologies />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 // Layout.propTypes = {
 //   children: PropTypes.node.isRequired,
 // }
 
-export default Layout
+export default Layout;
