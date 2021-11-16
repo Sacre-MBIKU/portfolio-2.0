@@ -25,7 +25,8 @@ const Layout = ({
   bio,
   siteDescription,
   currentPost,
-  skillDetails
+  skillDetails,
+  projects
 }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
@@ -46,7 +47,7 @@ const Layout = ({
         currentPost={currentPost}
         siteDescription={siteDescription}
       />
-      <Release />
+      <Release projects={projects} />
       <Technologies skillDetails={skillDetails} />
       <Contact />
       <Footer

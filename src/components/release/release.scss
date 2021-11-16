@@ -27,10 +27,11 @@ $fontFamily: "Roboto Mono";
     .project {
       margin-top: 2.5em;
       width: 297px;
-      height: 406;
+      height: 450px;
       display: flex;
       border-radius: 9px;
       justify-content: space-between;
+      padding-bottom: 1em;
 
       .project__contents {
         width: 100%;
@@ -83,6 +84,7 @@ $fontFamily: "Roboto Mono";
     text-align: center;
     font-family: $fontFamily;
     color: #fff;
+    font-size: .8em;
   }
 
   a {

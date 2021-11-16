@@ -15,6 +15,7 @@ const IndexPage = ({ children, data }) => {
   const { siteTitle, siteDescription, currentPost, socialNetworks } =
     data.strapiGlobal;
   const { edges } = data.allStrapiSkills;
+  const projects = data.allStrapiProjects.edges;
 
   return (
     <Layout
@@ -25,6 +26,7 @@ const IndexPage = ({ children, data }) => {
       siteDescription={siteDescription}
       currentPost={currentPost}
       skillDetails={edges}
+      projects={projects}
     >
       <Seo title={siteTitle} />
     </Layout>
@@ -35,6 +37,22 @@ export default IndexPage;
 
 export const query = graphql`
   query MyQuery {
+    allStrapiProjects {
+      edges {
+        node {
+          title
+          projectURL
+          plateforme
+          description
+          coverImage {
+            alternativeText
+            url
+          }
+          date
+        }
+      }
+    }
+
     allStrapiSkills {
       edges {
         node {

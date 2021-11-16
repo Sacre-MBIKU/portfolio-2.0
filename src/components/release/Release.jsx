@@ -1,107 +1,34 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/prop-types */
 import * as React from "react";
 import SectionTitle from "../shared/section_title/SectionTitle";
 import "./release.scss";
 
-const Release = () => (
+const Release = ({ projects }) => (
   <section className="release-section" id="release">
     <SectionTitle title="REALISATIONS" />
     <div className="release-section__articles">
       <ul>
-        <li className="project">
-          <article className="project__contents">
-            <img
-              src="/Hobbs et Shaw.jpg"
-              alt="allo-ciné"
-              className="project__contents__img"
-            />
-            <div className="project__contents__description">
-              <div className="description-header">
-                <p className="project-date">08 Septembre 2021</p>
-                <h5 className="plateform">Application Web</h5>
+        {projects.map(({ node }, key) => (
+          <li className="project" key={key}>
+            <article className="project__contents">
+              <img
+                src={`http://localhost:1337${node.coverImage.url}`}
+                alt={node.title}
+                className="project__contents__img"
+              />
+              <div className="project__contents__description">
+                <div className="description-header">
+                  <p className="project-date">{node.date}</p>
+                  <h5 className="plateform">{node.plateforme}</h5>
+                </div>
+                <h3 className="project-title">{node.title}</h3>
+                <p className="project-details">{node.description}</p>
+                <a href={node.projectURL}>Visiter</a>
               </div>
-              <h3 className="project-title">Ba_Pros</h3>
-              <p className="project-details">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat dolorum unde exercitationem nam aliquid aspernatur ea
-                et, excepturi ducimus recusandae veritatis corporis earum
-                officia maxime animi odit dolore voluptatum eligendi!
-              </p>
-              <a href="/">Visiter</a>
-            </div>
-          </article>
-        </li>
-
-        <li className="project">
-          <article className="project__contents">
-            <img
-              src="/Hobbs et Shaw.jpg"
-              alt="allo-ciné"
-              className="project__contents__img"
-            />
-            <div className="project__contents__description">
-              <div className="description-header">
-                <p className="project-date">08 Septembre 2021</p>
-                <h5 className="plateform">Application Web</h5>
-              </div>
-              <h3 className="project-title">Ba_Pros</h3>
-              <p className="project-details">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat dolorum unde exercitationem nam aliquid aspernatur ea
-                et, excepturi ducimus recusandae veritatis corporis earum
-                officia maxime animi odit dolore voluptatum eligendi!
-              </p>
-              <a href="/">Visiter</a>
-            </div>
-          </article>
-        </li>
-
-        <li className="project">
-          <article className="project__contents">
-            <img
-              src="/Hobbs et Shaw.jpg"
-              alt="allo-ciné"
-              className="project__contents__img"
-            />
-            <div className="project__contents__description">
-              <div className="description-header">
-                <p className="project-date">08 Septembre 2021</p>
-                <h5 className="plateform">Application Web</h5>
-              </div>
-              <h3 className="project-title">Ba_Pros</h3>
-              <p className="project-details">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat dolorum unde exercitationem nam aliquid aspernatur ea
-                et, excepturi ducimus recusandae veritatis corporis earum
-                officia maxime animi odit dolore voluptatum eligendi!
-              </p>
-              <a href="/">Visiter</a>
-            </div>
-          </article>
-        </li>
-
-        <li className="project">
-          <article className="project__contents">
-            <img
-              src="/Hobbs et Shaw.jpg"
-              alt="allo-ciné"
-              className="project__contents__img"
-            />
-            <div className="project__contents__description">
-              <div className="description-header">
-                <p className="project-date">08 Septembre 2021</p>
-                <h5 className="plateform">Application Web</h5>
-              </div>
-              <h3 className="project-title">Ba_Pros</h3>
-              <p className="project-details">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat dolorum unde exercitationem nam aliquid aspernatur ea
-                et, excepturi ducimus recusandae veritatis corporis earum
-                officia maxime animi odit dolore voluptatum eligendi!
-              </p>
-              <a href="/">Visiter</a>
-            </div>
-          </article>
-        </li>
+            </article>
+          </li>
+        ))}
       </ul>
     </div>
   </section>
