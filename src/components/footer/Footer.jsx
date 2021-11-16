@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { Link } from "gatsby";
@@ -5,7 +6,7 @@ import React from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import "./footer.scss";
 
-const Footer = ({ author, bio, socialNetworks }) => {
+const Footer = ({ author, bio, socialNetworks, skillDetails }) => {
   return (
     <footer className="footer-section">
       <section className="footer__main">
@@ -14,25 +15,16 @@ const Footer = ({ author, bio, socialNetworks }) => {
           <strong className="bio">{bio}</strong>
 
           <ul className="social-media">
-            {console.log("bam", socialNetworks)}
-            <li>
-              <a href="https://github.com/Sacre-MBIKU" rel="noreferrer">
-                <img src="./github.svg" alt="github compt" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/sacrembiku/" rel="noreferrer">
-                <img src="./insta.svg" alt="social-media" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/sacr%C3%A9-joseph-mbiku-2ab6071b4/"
-                rel="noreferrer"
-              >
-                <img src="./linkedin.svg" alt="social-media" />
-              </a>
-            </li>
+            {socialNetworks.map(({ icon }, key) => (
+              <li key={key}>
+                <a href="https://github.com/Sacre-MBIKU" rel="noreferrer">
+                  <img
+                    src={`http://localhost:1337${icon.url}`}
+                    alt={icon.alternativeText}
+                  />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -46,7 +38,7 @@ const Footer = ({ author, bio, socialNetworks }) => {
               <AnchorLink to="/#release">Réalisations</AnchorLink>
             </li>
             <li>
-              <AnchorLink to="/#techno">Technologies</AnchorLink>
+              <AnchorLink to="/#techno">Compétences</AnchorLink>
             </li>
             <li>
               <AnchorLink to="/#contact">Contact</AnchorLink>
@@ -56,15 +48,11 @@ const Footer = ({ author, bio, socialNetworks }) => {
 
         <ul className="services">
           <strong>Services</strong>
-          <li>
-            <h4>UX/UI</h4>
-          </li>
-          <li>
-            <h4>Frontend</h4>
-          </li>
-          <li>
-            <h4>Backend</h4>
-          </li>
+          {skillDetails.map(({ node }, key) => (
+            <li key={key}>
+              <h4>{node.title}</h4>
+            </li>
+          ))}
         </ul>
 
         <div className="address">

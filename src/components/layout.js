@@ -24,7 +24,8 @@ const Layout = ({
   socialNetworks,
   bio,
   siteDescription,
-  currentPost
+  currentPost,
+  skillDetails
 }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
@@ -48,7 +49,12 @@ const Layout = ({
       <Release />
       <Technologies />
       <Contact />
-      <Footer socialNetworks={socialNetworks} author={author} bio={bio} />
+      <Footer
+        socialNetworks={socialNetworks}
+        author={author}
+        bio={bio}
+        skillDetails={skillDetails}
+      />
     </div>
   );
 };
