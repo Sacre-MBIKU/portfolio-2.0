@@ -1,16 +1,16 @@
-import * as React from "react"
-import SectionTitle from "../shared/section_title/SectionTitle"
-import "./release.scss"
+import * as React from "react";
+import SectionTitle from "../shared/section_title/SectionTitle";
+import "./release.scss";
 
 const Release = () => (
   <section className="release-section" id="release">
-    <SectionTitle  title="REALISATIONS" />
+    <SectionTitle title="REALISATIONS" />
     <div className="release-section__articles">
       <ul>
         <li className="project">
           <article className="project__contents">
             <img
-              src={"/Hobbs et Shaw.jpg"}
+              src="/Hobbs et Shaw.jpg"
               alt="allo-ciné"
               className="project__contents__img"
             />
@@ -26,7 +26,7 @@ const Release = () => (
                 et, excepturi ducimus recusandae veritatis corporis earum
                 officia maxime animi odit dolore voluptatum eligendi!
               </p>
-              <a href="#">Visiter</a>
+              <a href="/">Visiter</a>
             </div>
           </article>
         </li>
@@ -34,7 +34,7 @@ const Release = () => (
         <li className="project">
           <article className="project__contents">
             <img
-              src={"/Hobbs et Shaw.jpg"}
+              src="/Hobbs et Shaw.jpg"
               alt="allo-ciné"
               className="project__contents__img"
             />
@@ -50,7 +50,7 @@ const Release = () => (
                 et, excepturi ducimus recusandae veritatis corporis earum
                 officia maxime animi odit dolore voluptatum eligendi!
               </p>
-              <a href="#">Visiter</a>
+              <a href="/">Visiter</a>
             </div>
           </article>
         </li>
@@ -58,7 +58,7 @@ const Release = () => (
         <li className="project">
           <article className="project__contents">
             <img
-              src={"/Hobbs et Shaw.jpg"}
+              src="/Hobbs et Shaw.jpg"
               alt="allo-ciné"
               className="project__contents__img"
             />
@@ -74,7 +74,7 @@ const Release = () => (
                 et, excepturi ducimus recusandae veritatis corporis earum
                 officia maxime animi odit dolore voluptatum eligendi!
               </p>
-              <a href="#">Visiter</a>
+              <a href="/">Visiter</a>
             </div>
           </article>
         </li>
@@ -82,7 +82,7 @@ const Release = () => (
         <li className="project">
           <article className="project__contents">
             <img
-              src={"/Hobbs et Shaw.jpg"}
+              src="/Hobbs et Shaw.jpg"
               alt="allo-ciné"
               className="project__contents__img"
             />
@@ -98,13 +98,13 @@ const Release = () => (
                 et, excepturi ducimus recusandae veritatis corporis earum
                 officia maxime animi odit dolore voluptatum eligendi!
               </p>
-              <a href="#">Visiter</a>
+              <a href="/">Visiter</a>
             </div>
           </article>
         </li>
       </ul>
     </div>
   </section>
-)
+);
 
-export default Release
+export default Release;
