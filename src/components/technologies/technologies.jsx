@@ -1,21 +1,21 @@
-import * as React from "react"
-import SectionTitle from "../shared/section_title/SectionTitle"
-import "./technologies.scss"
+import * as React from "react";
+import SectionTitle from "../shared/section_title/SectionTitle";
+import "./technologies.scss";
 
 const Technologies = () => (
   <section className="technologies-section" id="techno">
-    <SectionTitle title="TECHNOLOGIES" />
+    <SectionTitle title="COMPETENCES" />
     <div className="technologies-section__articles">
       <ul>
         <li className="techno">
           <article className="techno__contents">
             <img
-              src={"/gatsby.png"}
+              src="/gatsby.png"
               alt="allo-ciné"
               className="techno__contents__img"
             />
             <div className="techno__contents__description">
-              <h6>Gatsby</h6>
+              <h6>Frontend</h6>
             </div>
           </article>
         </li>
@@ -23,12 +23,12 @@ const Technologies = () => (
         <li className="techno">
           <article className="techno__contents">
             <img
-              src={"/gatsby.png"}
+              src="/gatsby.png"
               alt="allo-ciné"
               className="techno__contents__img"
             />
             <div className="techno__contents__description">
-              <h6>Gatsby</h6>
+              <h6>Frontend</h6>
             </div>
           </article>
         </li>
@@ -36,12 +36,12 @@ const Technologies = () => (
         <li className="techno">
           <article className="techno__contents">
             <img
-              src={"/gatsby.png"}
+              src="/gatsby.png"
               alt="allo-ciné"
               className="techno__contents__img"
             />
             <div className="techno__contents__description">
-              <h6>Gatsby</h6>
+              <h6>Frontend</h6>
             </div>
           </article>
         </li>
@@ -49,18 +49,18 @@ const Technologies = () => (
         <li className="techno">
           <article className="techno__contents">
             <img
-              src={"/gatsby.png"}
+              src="/gatsby.png"
               alt="allo-ciné"
               className="techno__contents__img"
             />
             <div className="techno__contents__description">
-              <h6>Gatsby</h6>
+              <h6>Frontend</h6>
             </div>
           </article>
         </li>
       </ul>
     </div>
   </section>
-)
+);
 
-export default Technologies
+export default Technologies;
