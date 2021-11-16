@@ -1,22 +1,20 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { Link } from "gatsby";
 import React from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import "./footer.scss";
 
-const Footer = () => {
+const Footer = ({ author, bio, socialNetworks }) => {
   return (
     <footer className="footer-section">
       <section className="footer__main">
         <div className="footer__main__profile">
-          <div className="logo">Sacré MBIKU</div>
-          <strong className="bio">
-            Ayant une bonne maitrise de la méthodologie agile, soutenue par une
-            forte créativité nous apportons une transformation digitale adéquate
-            à vos projets.
-          </strong>
+          <div className="logo">{author}</div>
+          <strong className="bio">{bio}</strong>
 
           <ul className="social-media">
+            {console.log("bam", socialNetworks)}
             <li>
               <a href="https://github.com/Sacre-MBIKU" rel="noreferrer">
                 <img src="./github.svg" alt="github compt" />

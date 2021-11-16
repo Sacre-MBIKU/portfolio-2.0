@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /**
  * Layout component that queries for data
  * with Gatsby's useStaticQuery component
@@ -7,7 +8,6 @@
 
 import * as React from "react";
 // import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby";
 import "@fontsource/roboto-mono";
 
 import Header from "./header/Header";
@@ -18,25 +18,37 @@ import Technologies from "./technologies/technologies";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 
-const Layout = () => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+const Layout = ({
+  author,
+  siteTitle,
+  socialNetworks,
+  bio,
+  siteDescription,
+  currentPost
+}) => {
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `);
 
   return (
     <div className="container">
-      <Header siteTitle={data.site.siteMetadata.title || `Title`} />
-      <Home />
+      <Header siteTitle={siteTitle || `Portfolio`} />
+      <Home
+        author={author}
+        siteTitle={siteTitle}
+        currentPost={currentPost}
+        siteDescription={siteDescription}
+      />
       <Release />
       <Technologies />
       <Contact />
-      <Footer />
+      <Footer socialNetworks={socialNetworks} author={author} bio={bio} />
     </div>
   );
 };
