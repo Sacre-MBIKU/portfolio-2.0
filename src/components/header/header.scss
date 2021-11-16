@@ -11,6 +11,11 @@ header {
     align-items: center;
     padding: 0 1em;
 
+    @media (max-width: 839.91px) {
+      flex-direction: column;
+      width: 150px;
+      padding: 1em;
+    }
     .activeLink{
       color: #05caad;
     }
@@ -41,14 +46,21 @@ header {
     }
 
     ul {
-      min-width: 400px;
-      max-width: 450px;
+      
       display: flex;
       align-items: center;
       justify-content: space-around;
+      flex-direction: row ;
+      min-width: 500px;
 
       @media (max-width: 839.91px) {
-        display: none;
+        display: none ;
+        flex-direction: column;
+        width: 100px;
+
+        li {
+          margin-bottom: 1em;
+        }
       }
 
       li {

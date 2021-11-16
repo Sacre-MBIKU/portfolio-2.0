@@ -1,42 +1,54 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { FaBars } from "react-icons/fa"
-import "./header.scss"
+import React, { useState } from "react";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./header.scss";
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <h2 className="logo">Sacré MBIKU</h2>
-    <nav>
-      <div className="humberger">
-        <FaBars className="faBars" />
-      </div>
+const Header = () => {
+  const [isHamburgerVisible, setIsHamburgerVisible] = useState(true);
+  return (
+    <header>
+      <h2 className="logo">Sacré MBIKU</h2>
+      <nav>
+        <div
+          className="humberger"
+          style={{ display: isHamburgerVisible ? "block" : "none" }}
+        >
+          <FaBars
+            className="faBars"
+            onClick={() => setIsHamburgerVisible(!isHamburgerVisible)}
+          />
+        </div>
 
-      <ul>
-        <li>
-          <AnchorLink className="activeLink" to="/#home">Accueil</AnchorLink>
-        </li>
+        <div
+          className="cross"
+          style={{ display: !isHamburgerVisible ? "block" : "none" }}
+        >
+          <FaTimes
+            className="faBars"
+            onClick={() => setIsHamburgerVisible(!isHamburgerVisible)}
+          />
+        </div>
 
-        <li>
-          <AnchorLink to="/#release">Réalisations</AnchorLink>
-        </li>
-        <li>
-          <AnchorLink to="/#techno">Technologies</AnchorLink>
-        </li>
-        <li>
-          <AnchorLink to="/#contact">Contact</AnchorLink>
-        </li>
-      </ul>
-    </nav>
-  </header>
-)
+        <ul>
+          <li>
+            <AnchorLink className="activeLink" to="/#home">
+              Accueil
+            </AnchorLink>
+          </li>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+          <li>
+            <AnchorLink to="/#release">Réalisations</AnchorLink>
+          </li>
+          <li>
+            <AnchorLink to="/#techno">Technologies</AnchorLink>
+          </li>
+          <li>
+            <AnchorLink to="/#contact">Contact</AnchorLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
