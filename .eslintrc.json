@@ -21,6 +21,7 @@
     ],
     "rules": {
         "react/function-component-definition": 0,
-        "react/jsx-filename-extension": 0
+        "react/jsx-filename-extension": 0,
+        "export": 0
     }
 }

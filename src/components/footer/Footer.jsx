@@ -1,7 +1,8 @@
-import { Link } from "gatsby"
-import React from "react"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import "./footer.scss"
+/* eslint-disable no-unused-vars */
+import { Link } from "gatsby";
+import React from "react";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import "./footer.scss";
 
 const Footer = () => {
   return (
@@ -17,18 +18,21 @@ const Footer = () => {
 
           <ul className="social-media">
             <li>
-              <a href="#">
-                <img src={"./github.svg"} alt="github compt" />
+              <a href="https://github.com/Sacre-MBIKU" rel="noreferrer">
+                <img src="./github.svg" alt="github compt" />
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={"./insta.svg"} alt="social-media" />
+              <a href="https://www.instagram.com/sacrembiku/" rel="noreferrer">
+                <img src="./insta.svg" alt="social-media" />
               </a>
             </li>
             <li>
-              <a href="#">
-                <img src={"./linkedin.svg"} alt="social-media" />
+              <a
+                href="https://www.linkedin.com/in/sacr%C3%A9-joseph-mbiku-2ab6071b4/"
+                rel="noreferrer"
+              >
+                <img src="./linkedin.svg" alt="social-media" />
               </a>
             </li>
           </ul>
@@ -77,11 +81,13 @@ const Footer = () => {
         </div>
       </section>
       <p className="footer__copyright">
-        <AnchorLink to="/#home"><img src="./homeLink.png" alt="link arrow icon" /></AnchorLink>
+        <AnchorLink to="/#home">
+          <img src="./homeLink.png" alt="link arrow icon" />
+        </AnchorLink>
         <span>2021, All Right Reserve. Sacré MBIKU MUKWAKANI</span>
       </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
