@@ -27,6 +27,7 @@ $fontFamily: "Roboto Mono";
       border-style: none;
       font-family: $fontFamily;
       border-radius: 6px;
+      padding: 2em;
     }
 
     textarea {
@@ -40,6 +41,7 @@ $fontFamily: "Roboto Mono";
       border-style: none;
       border-radius: 6px;
       font-family: $fontFamily;
+      cursor: pointer;
     }
   }
 }
