@@ -1,6 +1,6 @@
-import * as React from "react"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import "./home.scss"
+import * as React from "react";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import "./home.scss";
 
 const Home = () => (
   <main className="home-section">
@@ -27,9 +27,9 @@ const Home = () => (
     </section>
 
     <div className="imageDescription">
-      <img src={"/fullstack-developer.png"} alt="fullstack-developer" />
+      <img src="/fullstack-developer.png" alt="fullstack-developer" />
     </div>
   </main>
-)
+);
 
-export default Home
+export default Home;
