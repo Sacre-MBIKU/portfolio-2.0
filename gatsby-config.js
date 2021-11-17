@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Full-Stack Developer Portfolio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Sacré MBIKU Développeur Fullstack`,
+    description: `Développeur fullstack, UX/UI Designer et Formateur `,
+    titleTemplate: `Portfolio Site`,
+    author: `Sacré MBIKU`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`
   },
   plugins: [

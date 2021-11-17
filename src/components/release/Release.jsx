@@ -24,7 +24,9 @@ const Release = ({ projects }) => (
                 </div>
                 <h3 className="project-title">{node.title}</h3>
                 <p className="project-details">{node.description}</p>
-                <a href={node.projectURL}>Visiter</a>
+                <a rel="noreferrer" href={node.projectURL}>
+                  Visiter
+                </a>
               </div>
             </article>
           </li>
